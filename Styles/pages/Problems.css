@@ -1,0 +1,104 @@
+body{
+    /* background-image: url(../../assets/problems/backgroundProblems.png); */
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-color: black;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    flex-direction: column;
+    gap: 40px;
+    background-color: black;
+    color: black;
+}
+.content{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-direction: row;
+    width: 1400px;
+    overflow: none;
+    gap: 30px;
+}
+@media (max-width:1350px){
+    .content{
+         grid-template-columns: 1fr;
+         justify-items: center;
+         width: 100%;
+         height: 600px;
+         overflow: auto;
+    }
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    gap: 30px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+.card h1{
+    color: black;
+    font-size: 30px;
+    margin-top: 10px;
+}
+.card p{
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    color: black;
+}
+.card a{
+    width: 250px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    border-radius: 10px;
+    border: none;
+    background-color: #006eff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.card a:hover{
+    filter: brightness(0.80);
+}
+@media (max-width:450px){
+    .card{
+        width: 250px;
+        height: 250px;
+    }
+    .card h1{
+         font-size: 20px;
+    }
+    .card p{
+         font-size: 14px;
+    }
+    .card a{
+        width: 200px;
+        height: 30px;
+    }
+}
+
+.bcg-problems{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
